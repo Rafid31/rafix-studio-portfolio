@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rafid — Creative Professional Portfolio" />
+  <title>Rafid | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <span class="loader-letter">R</span>
+      <span class="loader-letter">A</span>
+      <span class="loader-letter">F</span>
+      <span class="loader-letter">I</span>
+      <span class="loader-letter">D</span>
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">Rafid<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#skills" class="mobile-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-link">Experience</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-greeting reveal-text">Hello, I'm</p>
+      <h1 class="hero-name reveal-text">Rafid<span class="accent">.</span></h1>
+      <h2 class="hero-title reveal-text">
+        <span class="title-word">Creative</span>
+        <span class="title-word accent-word">Professional</span>
+        <span class="title-word">&amp; Visionary</span>
+      </h2>
+      <p class="hero-desc reveal-text">I craft compelling experiences, build meaningful brands, and bring ideas to life with precision and passion.</p>
+      <div class="hero-actions reveal-text">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+      <div class="hero-socials reveal-text">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-wrapper">
+        <img src="https://placehold.co/480x580/1a1a1a/C9A84C?text=Your+Photo" alt="Rafid" class="hero-photo" />
+        <div class="hero-image-glow"></div>
+      </div>
+      <div class="hero-floating-card card-1"><i class="fas fa-star accent"></i><span>5+ Years Experience</span></div>
+      <div class="hero-floating-card card-2"><i class="fas fa-check-circle accent"></i><span>50+ Projects Done</span></div>
+    </div>
+    <div class="hero-scroll-hint"><span>Scroll</span><div class="scroll-line"></div></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 — About Me</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-lead">I'm a passionate creative professional based in <span class="accent">Bangladesh</span>, specializing in design, content, and digital experiences.</p>
+          <p>With a sharp eye for detail and a love for clean aesthetics, I help brands and individuals stand out in a crowded digital landscape. My work blends strategy with creativity — every project is built with purpose.</p>
+          <p>When I'm not working, you'll find me exploring new design trends, experimenting with photography, or planning the next big idea.</p>
+          <a href="#" class="btn btn-primary" style="margin-top:2rem" download>Download CV</a>
+        </div>
+        <div class="about-bento">
+          <div class="bento-card bento-large"><span class="bento-number">5+</span><span class="bento-label">Years of Experience</span></div>
+          <div class="bento-card"><span class="bento-number">50+</span><span class="bento-label">Projects Completed</span></div>
+          <div class="bento-card"><span class="bento-number">30+</span><span class="bento-label">Happy Clients</span></div>
+          <div class="bento-card bento-accent"><i class="fas fa-award"></i><span class="bento-label">Award Winning Work</span></div>
+          <div class="bento-card"><span class="bento-number">100%</span><span class="bento-label">Client Satisfaction</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">02 — Skills</div>
+      <h2 class="section-title">What I Do</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-paint-brush accent"></i> Design</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item"><div class="skill-bar-top"><span>UI/UX Design</span><span>92%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span>Brand Identity</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span>Motion Graphics</span><span>80%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-code accent"></i> Development</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item"><div class="skill-bar-top"><span>HTML / CSS</span><span>90%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span>JavaScript</span><span>75%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span>WordPress / CMS</span><span>85%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-bullhorn accent"></i> Marketing</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item"><div class="skill-bar-top"><span>Social Media</span><span>95%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span>Content Strategy</span><span>88%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div></div>
+            <div class="skill-bar-item"><div class="skill-bar-top"><span>SEO / Analytics</span><span>78%</span></div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="tools-grid">
+        <div class="tool-item"><i class="fab fa-figma"></i><span>Figma</span></div>
+        <div class="tool-item"><i class="fab fa-adobe"></i><span>Photoshop</span></div>
+        <div class="tool-item"><i class="fab fa-adobe"></i><span>Illustrator</span></div>
+        <div class="tool-item"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
+        <div class="tool-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+        <div class="tool-item"><i class="fab fa-instagram"></i><span>Instagram</span></div>
+        <div class="tool-item"><i class="fab fa-google"></i><span>Google Ads</span></div>
+        <div class="tool-item"><i class="fas fa-chart-bar"></i><span>Analytics</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">03 — Work</div>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="development">Development</button>
+        <button class="filter-btn" data-filter="marketing">Marketing</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="design"><div class="project-img-wrap"><img src="https://placehold.co/600x400/111111/C9A84C?text=Project+1" alt="Project 1" loading="lazy"/><div class="project-overlay"><a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a><a href="#" class="project-link"><i class="fab fa-github"></i></a></div></div><div class="project-info"><div class="project-tags"><span class="tag">Brand Identity</span><span class="tag">Design</span></div><h3 class="project-title">Brand Identity — Studio X</h3><p class="project-desc">Complete visual identity system including logo, color palette, typography, and brand guidelines for a creative studio.</p></div></div>
+        <div class="project-card" data-category="development"><div class="project-img-wrap"><img src="https://placehold.co/600x400/111111/C9A84C?text=Project+2" alt="Project 2" loading="lazy"/><div class="project-overlay"><a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a><a href="#" class="project-link"><i class="fab fa-github"></i></a></div></div><div class="project-info"><div class="project-tags"><span class="tag">Web Design</span><span class="tag">Development</span></div><h3 class="project-title">E-Commerce Website — ShopFlow</h3><p class="project-desc">Full responsive e-commerce site with product filtering, cart system, and smooth checkout experience.</p></div></div>
+        <div class="project-card" data-category="marketing"><div class="project-img-wrap"><img src="https://placehold.co/600x400/111111/C9A84C?text=Project+3" alt="Project 3" loading="lazy"/><div class="project-overlay"><a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a><a href="#" class="project-link"><i class="fab fa-github"></i></a></div></div><div class="project-info"><div class="project-tags"><span class="tag">Social Media</span><span class="tag">Marketing</span></div><h3 class="project-title">Social Campaign — GrowthLab</h3><p class="project-desc">Full social media strategy and content calendar that grew client following by 300% in 3 months.</p></div></div>
+        <div class="project-card" data-category="design"><div class="project-img-wrap"><img src="https://placehold.co/600x400/111111/C9A84C?text=Project+4" alt="Project 4" loading="lazy"/><div class="project-overlay"><a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a><a href="#" class="project-link"><i class="fab fa-github"></i></a></div></div><div class="project-info"><div class="project-tags"><span class="tag">UI Design</span><span class="tag">Mobile</span></div><h3 class="project-title">Mobile App UI — TaskFlow</h3><p class="project-desc">Clean and intuitive mobile app interface design for a productivity tool with dark and light modes.</p></div></div>
+        <div class="project-card" data-category="development"><div class="project-img-wrap"><img src="https://placehold.co/600x400/111111/C9A84C?text=Project+5" alt="Project 5" loading="lazy"/><div class="project-overlay"><a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a><a href="#" class="project-link"><i class="fab fa-github"></i></a></div></div><div class="project-info"><div class="project-tags"><span class="tag">Landing Page</span><span class="tag">Development</span></div><h3 class="project-title">SaaS Landing Page — CloudBase</h3><p class="project-desc">High-converting landing page with animated sections, testimonials, and integrated lead capture form.</p></div></div>
+        <div class="project-card" data-category="marketing"><div class="project-img-wrap"><img src="https://placehold.co/600x400/111111/C9A84C?text=Project+6" alt="Project 6" loading="lazy"/><div class="project-overlay"><a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a><a href="#" class="project-link"><i class="fab fa-github"></i></a></div></div><div class="project-info"><div class="project-tags"><span class="tag">Content</span><span class="tag">Strategy</span></div><h3 class="project-title">Content Strategy — BrandNova</h3><p class="project-desc">End-to-end content strategy including blog, email, and social that doubled organic traffic in 6 months.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">04 — Journey</div>
+      <h2 class="section-title">Experience &amp; Education</h2>
+      <div class="timeline-grid">
+        <div class="timeline-col">
+          <h3 class="timeline-col-title"><i class="fas fa-briefcase accent"></i> Work Experience</h3>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2022 — Present</span><h4 class="timeline-role">Senior Creative Designer</h4><p class="timeline-company">Freelance / Self-Employed</p><p class="timeline-desc">Leading brand identity, UI/UX, and digital marketing projects for international clients across multiple industries.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2020 — 2022</span><h4 class="timeline-role">UI/UX Designer</h4><p class="timeline-company">Digital Agency — Dhaka</p><p class="timeline-desc">Designed user interfaces for web and mobile applications. Collaborated with dev teams to deliver pixel-perfect products.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2018 — 2020</span><h4 class="timeline-role">Graphic Designer</h4><p class="timeline-company">Creative Studio — Dhaka</p><p class="timeline-desc">Created visual content for print and digital media including branding, social media, and advertising materials.</p></div></div>
+        </div>
+        <div class="timeline-col">
+          <h3 class="timeline-col-title"><i class="fas fa-graduation-cap accent"></i> Education</h3>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2016 — 2020</span><h4 class="timeline-role">Bachelor of Fine Arts</h4><p class="timeline-company">University of Dhaka</p><p class="timeline-desc">Majored in Visual Communication Design. Graduated with honors.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2021</span><h4 class="timeline-role">Google UX Design Certificate</h4><p class="timeline-company">Google / Coursera</p><p class="timeline-desc">Completed the full 7-course professional certificate covering UX research, wireframing, prototyping, and usability testing.</p></div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content"><span class="timeline-date">2022</span><h4 class="timeline-role">Meta Social Media Marketing</h4><p class="timeline-company">Meta / Coursera</p><p class="timeline-desc">Professional certificate covering paid advertising, content strategy, analytics, and campaign management.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">05 — Contact</div>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="contact-sub">Have a project in mind? I'd love to hear about it. Send me a message and let's create something great.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><p class="contact-label">Email</p><a href="mailto:hello@rafid.com" class="contact-value">hello@rafid.com</a></div></div>
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><p class="contact-label">Location</p><p class="contact-value">Dhaka, Bangladesh</p></div></div>
+          <div class="contact-item"><div class="contact-icon"><i class="fas fa-clock"></i></div><div><p class="contact-label">Availability</p><p class="contact-value">Open for freelance work</p></div></div>
+          <div class="contact-socials">
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="fname">Your Name</label><input type="text" id="fname" name="name" placeholder="John Doe" required /></div>
+            <div class="form-group"><label for="femail">Your Email</label><input type="email" id="femail" name="email" placeholder="john@example.com" required /></div>
+          </div>
+          <div class="form-group"><label for="fsubject">Subject</label><input type="text" id="fsubject" name="subject" placeholder="Project Inquiry" required /></div>
+          <div class="form-group"><label for="fmessage">Message</label><textarea id="fmessage" name="message" rows="6" placeholder="Tell me about your project..." required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full"><span>Send Message</span><i class="fas fa-paper-plane"></i></button>
+          <div class="form-success" id="formSuccess">Message sent! I'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-logo">Rafid<span class="accent">.</span></p>
+        <p class="footer-copy">&copy; 2025 Rafid. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#hero">Top</a>
+          <a href="#about">About</a>
+          <a href="#projects">Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
