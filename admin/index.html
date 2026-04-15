@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rafid Admin Panel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="loginScreen">
+    <div class="login-card">
+      <div class="login-logo">Rafid<span class="accent">.</span></div>
+      <p class="login-sub">Admin Panel</p>
+      <form id="loginForm">
+        <div class="field-group">
+          <label>Email</label>
+          <input type="email" id="loginEmail" placeholder="admin@rafid.com" required />
+        </div>
+        <div class="field-group">
+          <label>Password</label>
+          <input type="password" id="loginPassword" placeholder="••••••••" required />
+        </div>
+        <button type="submit" class="btn-login">Sign In <i class="fas fa-arrow-right"></i></button>
+        <p class="login-error" id="loginError"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" class="hidden">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Rafid<span class="accent">.</span></div>
+      <nav class="sidebar-nav">
+        <a href="#" class="sidebar-link active" data-tab="overview"><i class="fas fa-th-large"></i><span>Overview</span></a>
+        <a href="#" class="sidebar-link" data-tab="hero"><i class="fas fa-home"></i><span>Hero</span></a>
+        <a href="#" class="sidebar-link" data-tab="about"><i class="fas fa-user"></i><span>About</span></a>
+        <a href="#" class="sidebar-link" data-tab="projects"><i class="fas fa-folder"></i><span>Projects</span></a>
+        <a href="#" class="sidebar-link" data-tab="skills"><i class="fas fa-code"></i><span>Skills</span></a>
+        <a href="#" class="sidebar-link" data-tab="experience"><i class="fas fa-briefcase"></i><span>Experience</span></a>
+        <a href="#" class="sidebar-link" data-tab="contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
+      </nav>
+      <button class="btn-logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i><span>Logout</span></button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+
+      <!-- Top Bar -->
+      <header class="admin-topbar">
+        <h1 class="topbar-title" id="tabTitle">Overview</h1>
+        <div class="topbar-right">
+          <span class="topbar-user" id="topbarUser">admin@rafid.com</span>
+          <a href="../index.html" target="_blank" class="btn-view-site"><i class="fas fa-external-link-alt"></i> View Site</a>
+        </div>
+      </header>
+
+      <!-- OVERVIEW TAB -->
+      <div class="tab-content active" id="tab-overview">
+        <div class="stats-grid">
+          <div class="stat-card"><i class="fas fa-folder accent"></i><span class="stat-num" id="statProjects">6</span><span class="stat-label">Projects</span></div>
+          <div class="stat-card"><i class="fas fa-tools accent"></i><span class="stat-num" id="statSkills">9</span><span class="stat-label">Skills</span></div>
+          <div class="stat-card"><i class="fas fa-briefcase accent"></i><span class="stat-num" id="statExp">3</span><span class="stat-label">Experience</span></div>
+          <div class="stat-card"><i class="fas fa-graduation-cap accent"></i><span class="stat-num" id="statEdu">3</span><span class="stat-label">Education</span></div>
+        </div>
+        <div class="overview-note">
+          <i class="fas fa-info-circle accent"></i>
+          <p>Use the sidebar to edit any section of your portfolio. Changes save to Firebase and reflect on your live site.</p>
+        </div>
+      </div>
+
+      <!-- HERO TAB -->
+      <div class="tab-content" id="tab-hero">
+        <div class="form-card">
+          <h2 class="form-card-title">Hero Section</h2>
+          <div class="field-group"><label>Your Name</label><input type="text" id="heroName" placeholder="Rafid" /></div>
+          <div class="field-group"><label>Title Line 1</label><input type="text" id="heroTitle1" placeholder="Creative" /></div>
+          <div class="field-group"><label>Title Line 2 (Accent)</label><input type="text" id="heroTitle2" placeholder="Professional" /></div>
+          <div class="field-group"><label>Title Line 3</label><input type="text" id="heroTitle3" placeholder="&amp; Visionary" /></div>
+          <div class="field-group"><label>Description</label><textarea id="heroDesc" rows="3" placeholder="I craft compelling experiences..."></textarea></div>
+          <div class="field-group"><label>Instagram URL</label><input type="url" id="heroInstagram" placeholder="https://instagram.com/yourhandle" /></div>
+          <div class="field-group"><label>LinkedIn URL</label><input type="url" id="heroLinkedin" placeholder="https://linkedin.com/in/yourprofile" /></div>
+          <div class="field-group"><label>GitHub URL</label><input type="url" id="heroGithub" placeholder="https://github.com/yourusername" /></div>
+          <button class="btn-save" onclick="saveSection('hero')"><i class="fas fa-save"></i> Save Hero</button>
+          <p class="save-msg" id="save-hero"></p>
+        </div>
+      </div>
+
+      <!-- ABOUT TAB -->
+      <div class="tab-content" id="tab-about">
+        <div class="form-card">
+          <h2 class="form-card-title">About Section</h2>
+          <div class="field-group"><label>Lead Paragraph</label><textarea id="aboutLead" rows="3" placeholder="I'm a passionate creative professional..."></textarea></div>
+          <div class="field-group"><label>Paragraph 2</label><textarea id="aboutP2" rows="3" placeholder="With a sharp eye for detail..."></textarea></div>
+          <div class="field-group"><label>Paragraph 3</label><textarea id="aboutP3" rows="3" placeholder="When I'm not working..."></textarea></div>
+          <div class="field-group"><label>Years of Experience</label><input type="text" id="aboutYears" placeholder="5+" /></div>
+          <div class="field-group"><label>Projects Completed</label><input type="text" id="aboutProjects" placeholder="50+" /></div>
+          <div class="field-group"><label>Happy Clients</label><input type="text" id="aboutClients" placeholder="30+" /></div>
+          <button class="btn-save" onclick="saveSection('about')"><i class="fas fa-save"></i> Save About</button>
+          <p class="save-msg" id="save-about"></p>
+        </div>
+      </div>
+
+      <!-- PROJECTS TAB -->
+      <div class="tab-content" id="tab-projects">
+        <div class="form-card">
+          <h2 class="form-card-title">Projects</h2>
+          <p class="form-hint">Edit project details below. Add image URLs for your real project screenshots.</p>
+          <div id="projectsList"></div>
+          <button class="btn-add" onclick="addProject()"><i class="fas fa-plus"></i> Add Project</button>
+          <button class="btn-save" onclick="saveSection('projects')" style="margin-top:1rem"><i class="fas fa-save"></i> Save Projects</button>
+          <p class="save-msg" id="save-projects"></p>
+        </div>
+      </div>
+
+      <!-- SKILLS TAB -->
+      <div class="tab-content" id="tab-skills">
+        <div class="form-card">
+          <h2 class="form-card-title">Skills</h2>
+          <div id="skillsList"></div>
+          <button class="btn-add" onclick="addSkill()"><i class="fas fa-plus"></i> Add Skill</button>
+          <button class="btn-save" onclick="saveSection('skills')" style="margin-top:1rem"><i class="fas fa-save"></i> Save Skills</button>
+          <p class="save-msg" id="save-skills"></p>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE TAB -->
+      <div class="tab-content" id="tab-experience">
+        <div class="form-card">
+          <h2 class="form-card-title">Experience &amp; Education</h2>
+          <div id="expList"></div>
+          <button class="btn-add" onclick="addExp()"><i class="fas fa-plus"></i> Add Entry</button>
+          <button class="btn-save" onclick="saveSection('experience')" style="margin-top:1rem"><i class="fas fa-save"></i> Save Experience</button>
+          <p class="save-msg" id="save-experience"></p>
+        </div>
+      </div>
+
+      <!-- CONTACT TAB -->
+      <div class="tab-content" id="tab-contact">
+        <div class="form-card">
+          <h2 class="form-card-title">Contact Info</h2>
+          <div class="field-group"><label>Email Address</label><input type="email" id="contactEmail" placeholder="hello@rafid.com" /></div>
+          <div class="field-group"><label>Location</label><input type="text" id="contactLocation" placeholder="Dhaka, Bangladesh" /></div>
+          <div class="field-group"><label>Availability Status</label><input type="text" id="contactAvail" placeholder="Open for freelance work" /></div>
+          <button class="btn-save" onclick="saveSection('contact')"><i class="fas fa-save"></i> Save Contact</button>
+          <p class="save-msg" id="save-contact"></p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
